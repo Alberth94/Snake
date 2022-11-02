@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="Snake.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1> Snake</h1>
+        <div id="difficultyBtns">
+            <button id="easy" class="difficulty" onclick=startGame(id);>Easy </button>
+            <button id="medium" class="difficulty" onclick=startGame(id);>Medium</button>
+            <button id="hard" class="difficulty" onclick=startGame(id);>Hard</button>
+        </div>
+        <div id="playSpace">
+        <button id="restartBtn" onclick="restartGame();">Restart</button>
+        <div id="score"></div>
+        <table class = "table" id="gameBoard"></table>
+    </div>
+    <div id="endGame"></div>
+</body>
+</html>

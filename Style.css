@@ -1,0 +1,77 @@
+body {
+    background-color: #090934
+}
+
+h1 {
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    color: #6EB814;
+    text-shadow: 2px 2px 5px #2E2FE3;
+}
+
+td {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid #F7D4D6;
+    box-shadow: 5px 5px black;
+}
+
+#gameBoard {
+   margin:0 auto;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#score {
+    font-size: 40px;
+    color: #FCBA12;
+}
+
+button {
+    text-decoration: solid;
+    padding: 9px 18px;
+    border-radius: 10px;
+    color: #1414B8;
+    font-weight: bold;
+    background-color: #FCBA12;
+    font-size: 25px;
+    transition: 200ms transform;
+
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+#difficultyBtns {
+    text-align: center;
+    
+}
+
+#playSpace{
+    text-align: center;
+    margin:0 auto;
+}
+
+#easy {
+    color: green;
+}
+
+#hard {
+    color: red;
+}
+
+#restartBtn {
+    color: black;
+}
+
+#endGame {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #F7D4D6;
+}
