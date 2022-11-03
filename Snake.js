@@ -26,7 +26,7 @@ const keys = {
   down: 40
 };
 
-//Sounds.
+//Sounds
 let appleBiteSound = new Audio('./Sounds/AppleBite.mp3');
 let upSound = new Audio('./Sounds/Up.mp3');
 let downSound = new Audio('./Sounds/Down.mp3');
@@ -67,8 +67,8 @@ function createBoard(nrLines, nrColumns) {
         }
     }
     displaySnake();
-    updateScore();
     placeFood();
+    updateScore();
 }
 
 function displaySnake() {
@@ -170,19 +170,20 @@ function checkAppleEaten() {
 }
 
 function endGame() {
-    let snakeColor = document.createElement("div");
-    snakeColor.style = "background-color: green";
-    if (snakeBody.length === nrLines * nrColumns) {
-        winOrLose();
-        win = true
-        return win;
-    } else if (headLine === nrLines || headColumn === nrColumns || headColumn === -1 || headLine === -1 ||
-        board[headLine][headColumn].style.backgroundColor === snakeColor.style.backgroundColor) {//Based on the color of the snake, I check if it hit itself.
+    let snakeTailColor = document.createElement("div");
+    snakeTailColor.style = "background-color: green";
+   if (headLine === nrLines || headColumn === nrColumns || headColumn === -1 || headLine === -1 ||
+        board[headLine][headColumn].style.backgroundColor === snakeTailColor.style.backgroundColor) {//Based on the color of the snake, I check if it hit itself.
         wallHit.play();
         lost = true;
         winOrLose();
         return lost;
     }
+ else if (snakeBody.length === nrLines * nrColumns) {
+        winOrLose();
+        win = true
+        return win;
+    } 
     return false;   
 }
 
@@ -191,10 +192,10 @@ function winOrLose() {
         winSound.play();
         document.getElementById("endGame").innerText = "You won! You got " + points + " points."
     } else if (lost) {
-        updateScore();
         document.getElementById("endGame").innerText = "You Los! You got " + points + " points."
     }
     clearInterval(interval);
+    updateScore();
 }
 
 function updateScore() {
