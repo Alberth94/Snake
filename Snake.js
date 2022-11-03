@@ -179,8 +179,8 @@ function endGame() {
         winOrLose();
         return lost;
     } else if (snakeBody.length === nrLines * nrColumns) {
+        win = true;
         winOrLose();
-        win = true
         return win;
     } 
     return false;   
