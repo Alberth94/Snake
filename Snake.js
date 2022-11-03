@@ -39,14 +39,14 @@ function startGame(difficulty) {
     if (difficulty === "easy") {
         nrLines = 10;
         nrColumns = 10;
-        speed = 300;
+        speed = 250;
     } else if (difficulty === "medium") {
-        nrLines = 15;
-        nrColumns = 17;
-        speed = 200;
+        nrLines = 18;
+        nrColumns = 18;
+        speed = 170;
     } else if (difficulty === "hard") {
-        nrLines = 15;
-        nrColumns = 17;
+        nrLines = 18;
+        nrColumns = 18;
         speed = 100;
     }
     createBoard(nrLines, nrColumns);
