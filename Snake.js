@@ -72,8 +72,7 @@ function createBoard(nrLines, nrColumns) {
 }
 
 function displaySnake() {
-    endGame();
-    if (endGame() === true) {
+    if (endGame()) {
         return;
     } 
     snakeBody.push([headLine, headColumn]);
