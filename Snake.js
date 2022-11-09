@@ -148,8 +148,8 @@ function placeFood() {
     foodColumn = Math.floor(Math.random() * nrColumns);
     let color =  document.createElement('div');
     color.style = "background-color: #FCBA12";
-    if (board[foodLine][foodColumn].style.backgroundColor === color.style.backgroundColor) {//Based on the color of the board, I display the apple so that it is not placed over the snake.
-        board[foodLine][foodColumn].innerText = "🍎";
+    if (board[foodLine][foodColumn].style.backgroundColor === color.style.backgroundColor) {//Based on the color of the board, I display the                                                               
+        board[foodLine][foodColumn].innerText = "🍎";                                       //apple so that it is not placed over the snake.
     } else {
         placeFood();
     }
